@@ -1,0 +1,141 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #e3eaf2); 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff; 
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+.chat-window {
+  width: 100%;
+  min-height: 400px;
+  min-width: 800px;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #f9f9fb;
+  border: 1px solid #e0e0e0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.03); 
+}
+
+.message {
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  max-width: 75%;
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 0.2s;
+}
+
+.user-message {
+  background: linear-gradient(135deg, #dcf8c6, #c0e8b6);
+  color: #1a1a1a;
+  margin-left: auto;
+  text-align: right;
+}
+
+.bot-message {
+  background: linear-gradient(135deg, #e5e5ea, #d0d0d7);
+  color: #1a1a1a;
+  margin-right: auto;
+  text-align: left;
+}
+
+.typing .dot {
+  animation: blink 1s infinite;
+  display: inline-block;
+  font-weight: bold;
+  color: #555;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.input-section {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f7f7f9;
+  color: #1a1a1a;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+button {
+  margin-left: 0.5rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #3b8e3b);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 0; }
+  25%, 75% { opacity: 1; }
+}
