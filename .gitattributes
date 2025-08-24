@@ -1,1 +1,2 @@
 backend/fitness-chatbot-model-best/** filter=lfs diff=lfs merge=lfs -text
+backend/fitness-chatbot-model-best/* filter=lfs diff=lfs merge=lfs -text
